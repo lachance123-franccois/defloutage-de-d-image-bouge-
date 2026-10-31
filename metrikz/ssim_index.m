@@ -1,8 +1,4 @@
 function s = ssim_index(ref, est, peak)
-%SSIM_INDEX SSIM moyen (Wang et al., 2004), sans toolbox.
-%   Fenêtre gaussienne 11x11 (sigma = 1.5), K1 = 0.01, K2 = 0.03.
-%   Images en niveaux de gris (pour du RGB, moyenner sur les canaux).
-%   peak = 1 par défaut (images dans [0, 1]).
     if nargin < 3
         peak = 1;
     end
