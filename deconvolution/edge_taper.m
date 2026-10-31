@@ -1,9 +1,4 @@
 function J = edge_taper(I, k)
-%EDGE_TAPER Prépare une image pour une déconvolution par FFT (cf. edgetaper).
-%   La FFT suppose l'image périodique : la discontinuité entre bords opposés
-%   crée de fortes oscillations (ringing). On remplace progressivement,
-%   près des bords, l'image par sa version floutée circulairement, qui est
-%   cohérente avec le modèle circulaire.
     [H, W] = size(I);
     kh = size(k, 1);
     w = ramp(H, kh) * ramp(W, kh)';
