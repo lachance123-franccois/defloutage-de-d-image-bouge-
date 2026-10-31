@@ -63,7 +63,7 @@ Pour limiter les oscillations dues à la FFT, l'image est étendue par symétrie
 
 Pour un bruit de Poisson (comptage de photons), le maximum de vraisemblance conduit à des itérations multiplicatives :
 
-$x^{(t+1)} = x^{(t)} \cdot \frac{A^{\top}\!\left(y \,/\, A x^{(t)}\right)}{A^{\top}\mathbf{1}}$
+$\x^{(t+1)} = x^{(t)} \cdot \frac{A^{\top}\!\left(y \,/\, A x^{(t)}\right)}{A^{\top}\mathbf{1}}$
 
 où $A$ est l'opérateur de flou (convolution valide) et $A^{\top}$ son adjoint (corrélation).
 
