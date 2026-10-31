@@ -1,15 +1,4 @@
 function x = deconv_tv(y, k, lambda, n_iter)
-%DECONV_TV Déconvolution régularisée par variation totale (Chambolle-Pock).
-%   x = deconv_tv(y, k)                    lambda = 1e-3, 300 itérations
-%   x = deconv_tv(y, k, lambda, n_iter)
-%
-%   min_x  1/2 || A x - y ||^2  +  lambda * TV(x)   avec  0 <= x <= 1
-%   A : convolution 'valid' (gestion correcte des bords, comme deconv_rl).
-%   TV(x) = somme des normes des gradients (isotrope).
-%   Algorithme primal-dual de Chambolle & Pock (2011) : variables duales
-%   p (attache aux données) et q (gradient), pas tau = sigma = 1/3
-%   (||A|| <= 1 et ||grad||^2 <= 8, donc tau*sigma*L^2 <= 1).
-%   Ordre de grandeur : lambda ~ 0.1 x écart-type du bruit.
     if nargin < 3 || isempty(lambda)
         lambda = 1e-3;
     end
