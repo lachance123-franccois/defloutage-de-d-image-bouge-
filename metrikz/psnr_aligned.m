@@ -1,8 +1,4 @@
 function [p, shift] = psnr_aligned(ref, est, m)
-%PSNR_ALIGNED PSNR après recalage entier (décalage de +-m pixels au plus).
-%   En déconvolution aveugle, le noyau n'est connu qu'à une translation
-%   près : l'image restaurée peut être décalée de quelques pixels. On
-%   évalue donc au meilleur décalage, en ignorant une marge de m pixels
 %   (pratique standard, Levin et al. 2009).
     if nargin < 3, m = 8; end
     p = -inf; shift = [0 0];
