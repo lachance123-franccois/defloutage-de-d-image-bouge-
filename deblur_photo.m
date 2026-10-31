@@ -1,9 +1,9 @@
 clear; close all; rng(0);
 photoFile = fullfile('data', 'camera.png');
-mode      = 'aveugle';     % 'aveugle' ou 'lineaire'
-ks        = 31;            % taille max du noyau (impaire), à adapter au flou
-maxSide   = 600;           % les grandes photos sont réduites
-lambda    = 2e-3;          % régularisation TV (augmenter si l'image est bruitée)
+mode      = 'aveugle';     
+ks        = 31;            
+maxSide   = 600;          
+lambda    = 2e-3;       
 
 
 I = read_image(photoFile);
