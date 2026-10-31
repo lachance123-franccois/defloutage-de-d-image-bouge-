@@ -1,10 +1,3 @@
-%MAIN_NONBLIND Déconvolution à noyau connu : Wiener, Richardson-Lucy, variation totale.
-%
-%   Lancer depuis ce dossier :   >> main_nonblind       (~5 min)
-%   4 images x 4 noyaux (2 bougés linéaires, 2 tremblements), bruit gaussien
-%   d'écart-type 0,01. Le flou est simulé sans repliement circulaire (la
-%   scène déborde du cadre), comme sur une vraie photo.
-%   Sorties : console + results/*.png
 
 clear; close all;
 outDir = 'results';
