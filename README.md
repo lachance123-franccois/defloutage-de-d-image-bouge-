@@ -81,14 +81,12 @@ $\min_{0 \le x \le 1}\ \tfrac12 \lVert Ax-y\rVert^2 + \lambda\,\mathrm{TV}(x), \
 
 **Algorithme (Chambolle-Pock).** Avec les variables duales $p$ (attache aux données) et $q$ (gradient), et des pas $\tau = \sigma_d = 1/3$ :
 
-$
-\begin{aligned}
+$\begin{aligned}
 p &\leftarrow \frac{p + \sigma_d\,(A\bar{x} - y)}{1 + \sigma_d} \\
 q &\leftarrow \Pi_{\lVert q\rVert \le \lambda}\big(q + \sigma_d\,\nabla \bar{x}\big) \\
 x^{+} &= \Pi_{[0,1]}\big(x - \tau\,(A^{\top}p - \operatorname{div} q)\big) \\
 \bar{x} &\leftarrow 2x^{+} - x
-\end{aligned}
-$
+\end{aligned}$
 
 Les pas vérifient $\tau\,\sigma_d\,L^2 \le 1$, car $\lVert A\rVert \le 1$ et $\lVert\nabla\rVert^2 \le 8$.
 
