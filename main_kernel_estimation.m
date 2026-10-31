@@ -1,13 +1,3 @@
-  %MAIN_KERNEL_ESTIMATION Estimer le noyau à partir de la seule image floue.
-%
-%   Lancer depuis ce dossier :   >> main_kernel_estimation     (~5 min)
-%   1. Bougé linéaire : longueur et angle par le cepstre (K1, K2).
-%   2. Noyau quelconque : estimation aveugle multi-échelle avec prior L0
-%      (K1 à K4), puis déconvolution TV avec le noyau estimé.
-%   Les PSNR des déconvolutions aveugles sont mesurés au meilleur
-%   recalage (le noyau n'est défini qu'à une translation près).
-%   Sorties : console + results/*.png
-
 clear; close all;
 outDir = 'results';
 if ~exist(outDir, 'dir'), mkdir(outDir); end
