@@ -1,12 +1,4 @@
 function x = deconv_wiener(y, k, nsr)
-%DECONV_WIENER Déconvolution de Wiener (rapport bruit/signal constant).
-%   x = deconv_wiener(y, k)         nsr = 0.02
-%   x = deconv_wiener(y, k, nsr)
-%
-%   X(w) = conj(K(w)) Y(w) / (|K(w)|^2 + nsr)
-%   nsr joue le rôle de régularisation : là où |K| est petit (zéros du
-%   spectre du flou), on n'amplifie pas le bruit. Bords : extension miroir
-%   puis edge_taper, pour limiter les oscillations dues à la FFT.
     if nargin < 3
         nsr = 0.02;
     end
