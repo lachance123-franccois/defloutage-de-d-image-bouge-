@@ -1,20 +1,4 @@
-function k = blind_kernel_estimate(y, ks, lambda, gamma, n_inner)
-%BLIND_KERNEL_ESTIMATE Estimation aveugle d'un noyau de flou quelconque.
-%   k = blind_kernel_estimate(y, ks)
-%   k = blind_kernel_estimate(y, ks, lambda, gamma, n_inner)
-%   y  : image floue (niveaux de gris, dans [0, 1])
-%   ks : taille du noyau recherché (impaire, à surestimer légèrement)
-%
-%   Schéma de Xu, Zheng & Jia (2013) et Pan et al. (2014) :
-%   on alterne, du grossier au fin (pyramide de facteur sqrt(2)) :
-%     (1) image latente x = argmin ||k*x - y||^2 + lambda ||grad x||_0
-%         Le prior L0 ne garde que les contours principaux : c'est sur eux
-%         que le flou est le plus facile à mesurer ;
-%     (2) noyau k = argmin ||k*grad(x) - grad(y)||^2 + gamma ||k||^2
-%         (forme fermée par FFT), puis positivité, seuillage, suppression
-%         des petites composantes isolées, normalisation et recentrage.
-%   lambda décroît au fil des itérations pour faire entrer plus de détails.
-%   Valeurs par défaut : lambda = 4e-3, gamma = 100, 10 itérations par échelle.
+function k = blind_kernel_estimate(y, ks, lambda, gamma, n_inner)s
     if nargin < 3, lambda = 4e-3; end
     if nargin < 4, gamma = 100; end
     if nargin < 5, n_inner = 10; end
