@@ -1,8 +1,4 @@
 function show_image(I, ttl, lims)
-%SHOW_IMAGE Affiche une image en niveaux de gris ou RGB, sans toolbox.
-%   show_image(I)               I en double dans [0, 1]
-%   show_image(I, titre)
-%   show_image(I, titre, [vmin vmax])   plage d'affichage
     if nargin < 3 || isempty(lims)
         lims = [0 1];
     end
