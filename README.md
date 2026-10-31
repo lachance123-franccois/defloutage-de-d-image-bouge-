@@ -94,7 +94,7 @@ $$C = \mathcal{F}^{-1}\big(\log |Y|\big)$$
 
 transforme cette périodicité en un pic **négatif** à la distance $\pm L$ de l'origine, dans la direction du mouvement. On cherche le minimum de $C$ dans la couronne $3 \le r \le L_{\max}$. Sa position $(\Delta x, \Delta y)$ donne :
 
-$$L = \sqrt{\Delta x^2 + \Delta y^2}, \qquad \theta = \operatorname{atan2}(-\Delta y,\ \Delta x) \bmod 180^\circ$$
+$$\L = \sqrt{\Delta x^2 + \Delta y^2}, \qquad \theta = \operatorname{atan2}(-\Delta y,\ \Delta x) \bmod 180^\circ$$
 
 > **En clair :** les bandes sombres sont comme des vagues régulières. Le cepstre mesure leur espacement (la longueur du bougé) et leur orientation (l'angle). Une texture déjà périodique, comme un mur de briques, crée ses propres vagues et trompe la méthode.
 
