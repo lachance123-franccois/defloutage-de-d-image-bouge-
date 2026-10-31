@@ -1,5 +1,4 @@
 function out = resize_bilinear(x, outSize)
-%   Utilisé pour la pyramide grossier -> fin de l'estimation aveugle.
     [H, W] = size(x);
     r = ((1:outSize(1)) - 0.5) * H / outSize(1) + 0.5;
     c = ((1:outSize(2)) - 0.5) * W / outSize(2) + 0.5;
